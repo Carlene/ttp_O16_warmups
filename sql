@@ -66,7 +66,7 @@ FROM
 	film
 
 WHERE
-	title ILIKE '%Fred';
+	title ILIKE '%Fred%';
 
 --find all films that mention squirrels in the description
 
@@ -82,3 +82,27 @@ WHERE
 
 --find the intersection of the two previous subqueries
 -- hint: there's two
+
+SELECT
+	title
+	,description
+
+FROM
+	film
+
+WHERE
+	title ILIKE '%Fred%'
+
+INTERSECT 
+
+SELECT
+	title
+	,description
+
+FROM
+	film
+
+WHERE
+	description ILIKE '%squirrel%';
+
+
