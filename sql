@@ -22,10 +22,40 @@ WHERE
 
 -- now add the results of the first query to the results of the second (UNION)
 
+SELECT
+	first_name 
+
+FROM
+	customer
+
+WHERE
+	first_name ILIKE '%dan%'
+
+UNION
+
+SELECT
+	last_name
+
+FROM
+	customer
+
+WHERE
+	last_name ILIKE '%dan%';
 
 -- find customers exist in both queries
 -- hint: there's one
 
+SELECT
+	first_name
+	,last_name
+
+FROM
+	customer
+
+WHERE
+	first_name ILIKE '%dan%'
+	AND 
+	last_name ILIKE '%dan%';
 
 -- find all film with 'Fred' in the title
 
