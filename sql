@@ -1,8 +1,24 @@
 -- get all customers whose first names contain 'dan' (eg Dan, Daniel, Jordan)
 
+SELECT
+	first_name
+
+FROM
+	customer
+
+WHERE
+	first_name ILIKE '%dan%';
 
 -- get all customers whose last names contain 'dan' (eg Dan, Daniel, Jordan) 
 
+SELECT
+	last_name
+
+FROM
+	customer
+
+WHERE
+	last_name ILIKE '%dan%';
 
 -- now add the results of the first query to the results of the second (UNION)
 
